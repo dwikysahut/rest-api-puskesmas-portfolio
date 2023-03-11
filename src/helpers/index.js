@@ -46,13 +46,7 @@ module.exports = {
     }
     return result;
   },
-  promiseMiddleware: (fn) => async (request, response, next) => {
-    try {
-      await fn(request, response, next);
-    } catch (error) {
-      next(error);
-    }
-  },
+
   convertMontName: (month) => {
     switch (month) {
       case 'January':
